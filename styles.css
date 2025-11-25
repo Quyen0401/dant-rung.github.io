@@ -1,0 +1,153 @@
+/* --- THIẾT LẬP CHUNG --- */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc; /* Nền trắng sạch */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; 
+}
+
+/* --- HEADER --- */
+.vlog-header {
+    text-align: center;
+    padding: 30px 50px 20px;
+    background-color: white;
+    border-bottom: 2px solid #d47a40; /* Viền nâu cam */
+}
+
+.logo-section {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d47a40; /* Màu nhấn */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.vlog-main-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #8b4513; /* Nâu sẫm */
+    margin: 0;
+}
+
+/* --- PHẦN CHÍNH (SECTIONS) --- */
+.vlog-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Đảo ngược thứ tự video và nội dung */
+.vlog-section.reversed {
+    flex-direction: row-reverse;
+}
+
+.section-content {
+    flex-basis: 50%;
+}
+
+.video-container {
+    flex-basis: 50%;
+    background-color: #fae8d8; /* Nền box nhạt */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+/* Định dạng cho video và ảnh */
+.vlog-video {
+    width: 100%;
+    height: 450px; 
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-placeholder-label {
+    text-align: center;
+    color: #d47a40;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+}
+
+/* --- TEXT STYLES --- */
+.section-title {
+    color: #8b4513; /* Nâu sẫm */
+    font-size: 2em;
+    border-left: 5px solid #d47a40;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.sub-section-title {
+    color: #d47a40; /* Nâu cam nổi bật */
+    font-size: 1.3em;
+    margin-top: 30px;
+    border-bottom: 1px dashed #e8d0b9;
+    padding-bottom: 5px;
+}
+
+.highlight-text {
+    font-style: italic;
+    background-color: #fffaf5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #d47a4050;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding-left: 20px;
+    text-indent: -15px;
+    margin-bottom: 8px;
+}
+
+/* Dấu checkmark tùy chỉnh */
+ul li::before {
+    content: "✔️"; 
+    color: #d47a40; 
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513; /* Nền nâu đậm */
+    color: white;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* --- ĐIỀU CHỈNH KÍCH THƯỚC MÀN HÌNH (RESPONSIVE) --- */
+@media (max-width: 900px) {
+    .vlog-section {
+        flex-direction: column !important; /* Xếp dọc tất cả các mục trên di động */
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+    .vlog-video, .placeholder-image {
+        height: 300px; /* Giảm chiều cao video/ảnh trên di động */
+    }
+    .vlog-main-title {
+        font-size: 1.8em;
+    }
+}
